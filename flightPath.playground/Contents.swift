@@ -27,7 +27,6 @@ func findItineraries(flights: [Flight], from: String, to: String) {
                         let curItin = [flight] + $0
                         itineraries.append(curItin)
                     }
-//                    itineraries.append([flight] + itinerary)
                 }
             }
         }
