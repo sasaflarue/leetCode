@@ -21,7 +21,6 @@ func findItineraries(flights: [Flight], from: String, to: String) {
                 itineraries.append([flight])
             } else {
                 _ = flightList.remove(at: index)
-                print("curFlight \(flight)")
                 if let itinerary = dfs(flights: flightList, from: flight.destination, to: to) {
                     itinerary.forEach {
                         let curItin = [flight] + $0
