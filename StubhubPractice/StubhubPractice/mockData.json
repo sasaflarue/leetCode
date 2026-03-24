@@ -1,0 +1,123 @@
+
+[
+  {
+    "id": "1",
+    "eventName": "Seattle Mariners vs New York Yankees",
+    "homeTeam": "Seattle Mariners",
+    "awayTeam": "New York Yankees",
+    "venue": "T-Mobile Park",
+    "price": 85.00,
+    "currency": "USD",
+    "eventDate": "2025-06-15T19:05:00Z",
+    "section": "118",
+    "row": "F"
+  },
+  {
+    "id": "2",
+    "eventName": "Taylor Swift - The Eras Tour",
+    "homeTeam": null,
+    "awayTeam": null,
+    "venue": "Lumen Field",
+    "price": 410.00,
+    "currency": "USD",
+    "eventDate": "2025-07-20T03:00:00Z",
+    "section": "A",
+    "row": "12"
+  },
+  {
+    "id": "3",
+    "eventName": "San Francisco Giants vs Los Angeles Dodgers",
+    "homeTeam": "San Francisco Giants",
+    "awayTeam": "Los Angeles Dodgers",
+    "venue": "Oracle Park",
+    "price": 95.50,
+    "currency": "USD",
+    "eventDate": "2025-06-18T02:00:00Z",
+    "section": "135",
+    "row": "D"
+  },
+  {
+    "id": "4",
+    "eventName": "Coldplay - Music of the Spheres",
+    "homeTeam": "",
+    "awayTeam": "",
+    "venue": "Hollywood Bowl",
+    "price": 250.00,
+    "currency": "USD",
+    "eventDate": "2025-08-10T03:30:00Z",
+    "section": "Orchestra",
+    "row": "B"
+  },
+  {
+    "id": "5",
+    "eventName": "Chicago Bulls vs Miami Heat",
+    "homeTeam": "Chicago Bulls",
+    "awayTeam": "Miami Heat",
+    "venue": "United Center",
+    "price": 120.00,
+    "currency": "USD",
+    "eventDate": "2025-11-05T01:00:00Z",
+    "section": "200",
+    "row": "G"
+  },
+  {
+    "id": "6",
+    "eventName": "The Rolling Stones - World Tour",
+    "homeTeam": "",
+    "awayTeam": "",
+    "venue": "Madison Square Garden",
+    "price": 375.00,
+    "currency": "USD",
+    "eventDate": "2025-09-15T01:30:00Z",
+    "section": "Floor",
+    "row": "A"
+  },
+  {
+    "id": "7",
+    "eventName": "Seattle Seahawks vs Dallas Cowboys",
+    "homeTeam": "Seattle Seahawks",
+    "awayTeam": "Dallas Cowboys",
+    "venue": "Lumen Field",
+    "price": 180.00,
+    "currency": "USD",
+    "eventDate": "2025-10-05T20:25:00Z",
+    "section": "340",
+    "row": "P"
+  },
+  {
+    "id": "8",
+    "eventName": "New York Knicks vs Boston Celtics",
+    "homeTeam": "New York Knicks",
+    "awayTeam": "Boston Celtics",
+    "venue": "Madison Square Garden",
+    "price": 160.00,
+    "currency": "USD",
+    "eventDate": "2025-12-10T00:30:00Z",
+    "section": "120",
+    "row": "R"
+  },
+  {
+    "id": "9",
+    "eventName": "Coachella Weekend 1 - Pass",
+    "homeTeam": "",
+    "awayTeam": "",
+    "venue": "Empire Polo Club",
+    "price": 575.00,
+    "currency": "USD",
+    "eventDate": "2025-04-11T18:00:00Z",
+    "section": null,
+    "row": null
+  },
+  {
+    "id": "10",
+    "eventName": "Seattle Sounders vs LAFC",
+    "homeTeam": "Seattle Sounders",
+    "awayTeam": "LAFC",
+    "venue": "Lumen Field",
+    "price": 72.00,
+    "currency": "USD",
+    "eventDate": "2025-05-03T21:00:00Z",
+    "section": "233",
+    "row": "J"
+  }
+]

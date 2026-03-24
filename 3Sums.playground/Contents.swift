@@ -35,23 +35,26 @@ func threeSum(_ nums: [Int]) -> [[Int]] {
     var firstIterator = 0
     var secondIterator = 1
     var thirdIterator = 2
-    var added = Set<String>()
+    var added = Set<[Int]>()
+    let sortedNums = nums.sorted()
+    
     
     while firstIterator < nums.count - 2 {
-        let first = nums[firstIterator]
+        let first = sortedNums[firstIterator]
+        if first > 0 { break }
         while secondIterator < nums.count - 1 {
-            let second = nums[secondIterator]
-            
+            let second = sortedNums[secondIterator]
+            if firstIterator > 0 && sortedNums[firstIterator] == sortedNums[firstIterator - 1] { continue }
+
             while thirdIterator < nums.count {
-                let third = nums[thirdIterator]
+                let third = sortedNums[thirdIterator]
 //                print("first \(first), second \(second), third \(third)")
                 if first + second + third == 0 {
                     // need to check if unique here
-                    let sorted = [first, second, third].sorted()
-                    let description = sorted.description
-                    if !added.contains(description) {
+                    let sorted = [first, second, third]
+                    if !added.contains(sorted) {
                         combos.append(sorted)
-                        added.insert(description)
+                        added.insert(sorted)
                     }
                 }
                 thirdIterator += 1
@@ -71,4 +74,5 @@ func threeSum(_ nums: [Int]) -> [[Int]] {
 //print(threeSum([-1,0,1,2,-1,-4])) // [[-1,-1,2],[-1,0,1]]
 //print(threeSum([0,1,1])) // []
 //print(threeSum([0,0,0,0])) // [0, 0, 0]
-print(threeSum([-100,-70,-60,110,120,130,160])) // [[-100,-60,160],[-70,-60,130]]
+//print(threeSum([-100,-70,-60,110,120,130,160])) // [[-100,-60,160],[-70,-60,130]]
+print(threeSum([0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]))

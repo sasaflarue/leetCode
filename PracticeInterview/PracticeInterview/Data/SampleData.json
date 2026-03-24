@@ -1,0 +1,27 @@
+
+[
+  {
+    "id": "evt_1001",
+    "name": "Taylor Swift | The Eras Tour",
+    "category": "music",
+    "datetime_local": "2025-11-14T19:30:00",
+    "venue": { "name": "Lumen Field", "city": "Seattle", "state": "WA" },
+    "performers": [{ "name": "Taylor Swift" }],
+    "images": { "hero": "https://picsum.photos/seed/ts-1001/600/400" },
+    "pricing": { "min": 145.00, "currency": "USD" },
+    "popularity": 0.98,
+    "flags": { "lowFees": true, "fewLeft": false }
+  },
+  {
+    "id": "evt_1002",
+    "name": "Warriors @ Lakers",
+    "category": "sports",
+    "datetime_local": "2025-12-02T19:00:00",
+    "venue": { "name": "Crypto.com Arena", "city": "Los Angeles", "state": "CA" },
+    "performers": [{ "name": "Los Angeles Lakers" }, { "name": "Golden State Warriors" }],
+    "images": { "hero": "https://picsum.photos/seed/nba-1002/600/400" },
+    "pricing": { "min": 95.50, "currency": "USD" },
+    "popularity": 0.88,
+    "flags": { "lowFees": false, "fewLeft": true }
+  }
+]
