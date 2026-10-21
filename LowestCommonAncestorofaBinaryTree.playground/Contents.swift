@@ -82,7 +82,7 @@ class Solution {
     func findPath(_ root: TreeNode?, _ p: TreeNode)  -> [TreeNode]? {
         guard let root else { return nil }
         if p == root  {
-            print("finding path root")
+//            print("finding path root")
             return [root]
         } else {
             let pathLeft = findPath(root.left, p)
@@ -101,5 +101,5 @@ class Solution {
 
 //3,5,1,6,2,0,8,null,null,7,4]
 let root = TreeNode(3, TreeNode(5, TreeNode(6), TreeNode(2, TreeNode(7), TreeNode(4))), TreeNode(1, TreeNode(0), TreeNode(8)))
-//print(Solution().lowestCommonAncestor(root, TreeNode(5), TreeNode(1))?.val)
+print(Solution().lowestCommonAncestor(root, TreeNode(5), TreeNode(1))?.val)
 print(Solution().lowestCommonAncestor(root, TreeNode(5), TreeNode(4))?.val)
