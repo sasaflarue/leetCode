@@ -62,38 +62,47 @@ class Solution {
     }
     
     internal func insertionSortIntervals(_ intervals: [[Int]]) -> [[Int]] {
-        var solution = intervals
+        var sorted = intervals
         var iterator = 1
-        
-        while iterator < intervals.count {
-            var newPosition = iterator - 1
-            var swapped = false
-            while newPosition >= 0 && !swapped {
-                // 5 4 3 2
-                // new position = 0 iterator = 1
-//                print(("newPosition: \(newPosition) iterator: \(iterator)"))
-                if solution[newPosition][0] > solution[newPosition + 1][0]  {
-                    // swap
-//                    print("swapping: \(solution[newPosition]), and \(solution[newPosition + 1])")
-                    var temp = solution[newPosition]
-                    solution[newPosition] = solution[newPosition + 1]
-                    solution[newPosition + 1] = temp
-                    
-//                    print("solution: \(solution)")
-                    newPosition -= 1
-                } else {
-                    swapped = true
-                    
-                }
+        while iterator < sorted.count {
+            var nextPosition = iterator
+            while nextPosition > 0 && sorted[nextPosition - 1][1] > sorted[nextPosition][1] {
+                //swap
+                let temp = sorted[nextPosition - 1]
+                sorted[nextPosition - 1] = sorted[nextPosition]
+                sorted[nextPosition] = temp
+                nextPosition -= 1
             }
             iterator += 1
         }
         
-        return solution
+        
+        return sorted
+    }
+    
+    internal func bubbleSortIntervals(_ intervals: [[Int]]) -> [[Int]]  {
+        var sorted = intervals
+        var moves = intervals.count
+        
+        while moves > 0 {
+            var toMove = 0
+            while toMove < sorted.count - 1 {
+                if sorted[toMove][0] > sorted[toMove + 1][0] {
+                    let temp = sorted[toMove + 1]
+                    sorted[toMove + 1] = sorted[toMove]
+                    sorted[toMove] = temp
+                }
+                toMove += 1
+            }
+            
+            moves -= 1
+        }
+        return sorted
     }
 }
 
-//print(Solution().insertionSortIntervals([[5,5], [4,4], [2,2], [3,3], [7,7]]))
-print(Solution().merge([[1,4],[2,3]]))
-print(Solution().merge([[1,3],[2,6],[8,10],[15,18]]))
-print(Solution().merge([[2,3],[4,5],[6,7],[8,9],[1,10]]))
+print(Solution().insertionSortIntervals([[5,5], [4,4], [2,2], [3,3], [7,7]]))
+print(Solution().bubbleSortIntervals([[5,5], [4,4], [2,2], [3,3], [7,7]]))
+//print(Solution().merge([[1,4],[2,3]]))
+//print(Solution().merge([[1,3],[2,6],[8,10],[15,18]]))
+//print(Solution().merge([[2,3],[4,5],[6,7],[8,9],[1,10]]))
