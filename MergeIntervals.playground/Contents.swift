@@ -35,7 +35,6 @@ class Solution {
         let sorted = insertionSortIntervals(intervals)
         var currentStart = 0
         var currentEnd = currentStart
-//        print("sorted \(sorted)")
         
         while currentStart < sorted.count && currentEnd < sorted.count {
             var nextPosition = currentStart + 1
@@ -46,12 +45,10 @@ class Solution {
                     currentEnd += 1
                     nextPosition += 1
                     maxEnd = max(maxEnd, max(sorted[currentEnd][1], sorted[currentStart][1]))
-//                    print(maxEnd)
                 } else {
                     break
                 }
             }
-//            print("result \(result)")
             result.append([sorted[currentStart][0], maxEnd])
             currentStart = currentEnd + 1
             currentEnd = currentStart
@@ -99,10 +96,32 @@ class Solution {
         }
         return sorted
     }
+    
+    internal func insertionSortIntervals2(_ intervals: [[Int]]) -> [[Int]] {
+        guard intervals.count > 1 else { return intervals }
+        var iterator = 1
+        var sorted = intervals
+        
+        while iterator < intervals.count {
+            let value = sorted[iterator]
+            var currentPosition = iterator
+            while currentPosition > 0 && sorted[currentPosition - 1][1] > value[1] {
+                sorted[currentPosition] = sorted[currentPosition - 1]
+                currentPosition -= 1
+            }
+            
+            sorted[currentPosition] = value
+            
+            iterator += 1
+        }
+        
+        return sorted
+    }
 }
 
 print(Solution().insertionSortIntervals([[5,5], [4,4], [2,2], [3,3], [7,7]]))
-print(Solution().bubbleSortIntervals([[5,5], [4,4], [2,2], [3,3], [7,7]]))
+print(Solution().insertionSortIntervals2([[5,5], [4,4], [2,2], [3,3], [7,7]]))
+//print(Solution().bubbleSortIntervals([[5,5], [4,4], [2,2], [3,3], [7,7]]))
 //print(Solution().merge([[1,4],[2,3]]))
 //print(Solution().merge([[1,3],[2,6],[8,10],[15,18]]))
 //print(Solution().merge([[2,3],[4,5],[6,7],[8,9],[1,10]]))
